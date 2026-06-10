@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FiEye, FiEyeOff, FiAlertCircle } from "react-icons/fi";
 import logo from "../imagenes/Logo.png";
-import "./AdminLogin.css";
+import "./Adminlogin.css";
 import { API } from "../config";
 
 export default function AdminLogin() {

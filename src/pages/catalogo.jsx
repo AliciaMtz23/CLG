@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { FiCheck, FiPlus, FiX } from "react-icons/fi";
 import { useCart } from "../context/CartContext";
-import "./Catalogo.css";
+import "./catalogo.css";
 import { API } from "../config";
 
 export default function Catalogo() {

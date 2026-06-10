@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { FiSearch, FiEye, FiXCircle, FiCheck } from "react-icons/fi";
 import { formatFecha, fmtPeso, estadoClass, estadoLabel, metodoPagoLabel } from "../utils/formato";
-import "./AdminClientes.css";
+import "./Adminclientes.css";
 import { API } from "../config";
 
 export default function AdminClientes() {
