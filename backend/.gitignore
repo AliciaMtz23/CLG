@@ -1,0 +1,14 @@
+node_modules
+
+# Variables de entorno (NUNCA subir a git)
+.env
+.env.local
+.env.production
+
+# Imágenes subidas por usuarios (datos de runtime)
+uploads/arneses/*
+!uploads/arneses/.gitkeep
+
+# Logs
+*.log
+npm-debug.log*

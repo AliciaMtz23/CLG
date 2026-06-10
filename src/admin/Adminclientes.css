@@ -1,0 +1,172 @@
+.cl-toolbar-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  flex-wrap: wrap;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.cl-filtros {
+  display: flex;
+  gap: 4px;
+}
+
+.cl-filtro {
+  padding: 6px 14px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: none;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.cl-filtro:hover  { border-color: var(--text-muted); color: var(--text); }
+.cl-filtro.active { background: var(--text); border-color: var(--text); color: white; }
+
+.cl-total-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+.cl-total-badge span {
+  font-family: 'DM Mono', monospace;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.td-link {
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: var(--border-strong);
+  transition: color 0.15s;
+}
+.td-link:hover { color: var(--blue); text-decoration-color: var(--blue); }
+
+.td-email {
+  color: var(--blue);
+  text-decoration: none;
+  font-size: 0.875rem;
+}
+.td-email:hover { text-decoration: underline; }
+
+.td-fecha {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.td-vacio { color: var(--text-faint); font-size: 0.875rem; }
+
+.row-inactivo td { opacity: 0.45; }
+
+.cuenta-badge {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 0.72rem;
+  font-weight: 500;
+}
+.cuenta-badge.activo   { background: #d1fae5; color: #065f46; }
+.cuenta-badge.inactivo { background: var(--bg); color: var(--text-faint); border: 1px solid var(--border); }
+
+.btn-icon.success:hover { border-color: var(--green); color: var(--green); background: #d1fae5; }
+
+.btn-success {
+  background: var(--green);
+  color: white;
+  border: none;
+  border-radius: var(--radius);
+  padding: 9px 18px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+.btn-success:hover { opacity: 0.85; }
+
+.modal-wide { max-width: 620px; }
+
+.cl-detalle-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 24px;
+  padding: 18px;
+  background: var(--bg);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+.cl-detalle-item {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.cl-detalle-label {
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--text-faint);
+}
+
+.cl-detalle-valor {
+  font-size: 0.875rem;
+  color: var(--text);
+  font-weight: 500;
+}
+
+.cl-pedidos-titulo {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+.cl-contador {
+  margin-top: 10px;
+  font-size: 0.8rem;
+  color: var(--text-faint);
+  text-align: right;
+}
+
+.status-pill {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 0.72rem;
+  font-weight: 500;
+}
+.status-pill.pendiente  { background: #fef3c7; color: #92400e; }
+.status-pill.proceso    { background: #dbeafe; color: #1e40af; }
+.status-pill.camino     { background: #ede9fe; color: #6d28d9; }
+.status-pill.completado { background: #d1fae5; color: #065f46; }
+.status-pill.cancelado  { background: #fee2e2; color: #991b1b; }
+
+.metodo-badge {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .cl-filtros { overflow-x: auto; flex-wrap: nowrap; padding-bottom: 4px; -webkit-overflow-scrolling: touch; }
+  .cl-filtro  { white-space: nowrap; flex-shrink: 0; }
+  .cl-detalle-grid { grid-template-columns: 1fr; }
+  .modal-wide { max-width: 100%; }
+  .cl-total-badge { display: none; }
+  .modal-actions .btn-primary-admin,
+  .modal-actions .btn-secondary { width: 100%; justify-content: center; }
+  .modal-actions { flex-direction: column-reverse; }
+}

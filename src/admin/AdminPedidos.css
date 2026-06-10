@@ -1,0 +1,112 @@
+.ap-cliente-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.ap-cliente-nombre {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.ap-cliente-email {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.68rem;
+  color: var(--text-faint);
+}
+
+.ap-entrega-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.ap-entrega-loc {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.68rem;
+  color: var(--text-faint);
+}
+
+.ap-folio-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.ap-folio-val {
+  font-family: 'DM Mono', monospace;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.ap-items-table {
+  margin-bottom: 20px;
+}
+
+.ap-item-nombre {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.ap-item-tipo {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.65rem;
+  color: var(--text-faint);
+  margin-top: 2px;
+}
+
+.ap-estado-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-top: 20px;
+}
+
+.ap-estado-row {
+  display: flex;
+  gap: 8px;
+}
+
+.ap-estado-select {
+  flex: 1;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.875rem;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  padding: 8px 10px;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.15s;
+}
+
+.ap-estado-select:focus {
+  border-color: var(--blue);
+}
+
+.btn-primary-admin {
+  background: var(--text);
+  color: white;
+  border: none;
+  border-radius: var(--radius);
+  padding: 9px 18px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.btn-primary-admin:hover:not(:disabled) { opacity: 0.85; }
+.btn-primary-admin:disabled { opacity: 0.35; cursor: not-allowed; }
